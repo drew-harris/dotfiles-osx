@@ -120,9 +120,10 @@ eval "$(zoxide init zsh)"
 
 # append
 path+=('/Users/drew/.config/bin')
+export DENO_INSTALL="/Users/drew/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
 # or prepend
 # export to sub-processes (make it inherited by child processes)
-export PATH
 
 
 # Open vs code and close
