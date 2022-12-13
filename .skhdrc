@@ -73,7 +73,7 @@ alt + shift - 0 : yabai -m space --balance
 
 
 # close focused window
-alt - w : yabai -m window --close && yabai -m display --focus recent
+alt - w : yabai -m window --close
 
 
 # enter fullscreen mode for the focused container
@@ -81,6 +81,10 @@ alt - f : yabai -m window --toggle zoom-fullscreen
 
 # Rotate
 alt - r: yabai -m window --toggle split
+
+# Refresh yabai indicator
+alt + shift - r : osascript -e 'quit app "yabaiIndicator"' \
+                  && open -a yabaiIndicator
 
 alt - g : yabai -m space --toggle padding; yabai -m space --toggle gap
 
