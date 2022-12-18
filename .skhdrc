@@ -46,10 +46,9 @@ alt + shift - 9 : yabai -m window --space 9
 
 # change layout of desktop
 alt - e : yabai -m space --layout bsp
-alt - l : yabai -m space --layout float
 alt - s : yabai -m space --layout stack
 
-alt - f: yabai -m window --toggle float
+alt - l: yabai -m window --toggle float
 
 # cycle through stack windows
 alt - p : yabai -m window --focus stack.next || yabai -m window --focus south

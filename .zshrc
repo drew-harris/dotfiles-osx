@@ -131,4 +131,6 @@ alias cx="code . && exit"
 alias cxx="code . && tmux detach -P"
 alias zr="zoxide remove -i"
 alias stopy="brew services stop yabai"
-alias starty="brew services start yabai"
+
+eval "$(starship init zsh)"
+
