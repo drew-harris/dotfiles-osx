@@ -48,7 +48,7 @@ alt + shift - 9 : yabai -m window --space 9
 alt - e : yabai -m space --layout bsp
 alt - s : yabai -m space --layout stack
 
-alt - l: yabai -m window --toggle float
+# alt - *: yabai -m window --toggle float
 
 # cycle through stack windows
 alt - p : yabai -m window --focus stack.next || yabai -m window --focus south
@@ -72,7 +72,7 @@ alt + shift - 0 : yabai -m space --balance
 
 
 # close focused window
-alt - w : yabai -m window --close
+alt + shift - q : yabai -m window --close
 
 
 # enter fullscreen mode for the focused container

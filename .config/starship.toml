@@ -6,6 +6,8 @@
 [lua]
 disabled = true
 
+[package]
+disabled = true
 
 [fill]
 symbol = '-'
