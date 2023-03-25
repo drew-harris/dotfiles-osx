@@ -1,9 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -79,6 +73,7 @@ ZSH_THEME="simple" # set by `omz`
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git yarn colored-man-pages zsh-autosuggestions zsh-syntax-highlighting macos jump tmux)
+plugins+=(zsh-better-npm-completion)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -131,6 +126,9 @@ alias cx="code . && exit"
 alias cxx="code . && tmux detach -P"
 alias zr="zoxide remove -i"
 alias stopy="brew services stop yabai"
+alias lg="lazygit"
+alias gg="git-graph"
+alias v="nvim"
 
 eval "$(starship init zsh)"
 
@@ -140,3 +138,5 @@ if [ -f '/Users/drew/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/drew/googl
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/drew/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/drew/google-cloud-sdk/completion.zsh.inc'; fi
+
+# source ~/.config/bin/zsh-better-npm-completion

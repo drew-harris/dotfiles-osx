@@ -17,3 +17,6 @@ style = 'bold green'
 [gcloud]
 disabled = true
 
+[git_metrics]
+disabled = false
+
