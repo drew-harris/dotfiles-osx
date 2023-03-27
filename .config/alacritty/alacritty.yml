@@ -4,7 +4,6 @@ window:
   padding:
     x: 3
     y: 3
-  dynamic_padding: false
   decorations: buttonless
 
 shell:
@@ -14,46 +13,80 @@ shell:
     - -c
     - "tmux attach || tmux"
 
+scrollling:
+  history: 0
+
+key_bindings:
+  - { key: V, mods: Command, action: Paste }
+  - { key: C, mods: Command, action: Copy }
+  - { key: T, mods: Command, chars: "\x01c" } # new tab
+  - { key: L, mods: Command, chars: "\x01p" } # next tab
+  - { key: S, mods: Command, chars: "\x01f" } # search folders
+  - { key: A, mods: Command, chars: "\x01s" } # search sessions
+  - { key: O, mods: Command, chars: "\x01o" } # other pane
+
+  # https://www.google.com
+mouse:
+  # If this is `true`, the cursor is temporarily hidden when typing.
+  hide_when_typing: true
+
 font:
   normal:
     family: "Hack Nerd Font Mono"
     style: Regular
   size: 14.0
+
+custom_cursor_colors: true
+
+bell:
+  animation: EaseOutExpo
+  color: "0xffffff"
+  duration: 0
+
+draw_bold_text_with_bright_colors: true
+
+selection:
+  # This string contains all characters that are used as separators for
+  # "semantic words" in Alacritty.
+  semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
+  # When set to `true`, selected text will be copied to the primary clipboard.
+  save_to_clipboard: true
+
 colors:
   # Default colors
   primary:
-    background: '#161616'
-    foreground: '#e4e4e4'
+    background: "#161616"
+    foreground: "#e4e4e4"
 
   # Cursor volors
   cursor:
-    text: '#feffff'
-    cursor: '#ffb472'
+    text: "#feffff"
+    cursor: "#ffb472"
 
   # Normal colors
   normal:
-    black: '#a3a3a3'
-    red: '#e98885'
-    green: '#a3c38b'
-    yellow: '#ffc68d'
-    blue: '#a6cae2'
-    magenta: '#e7cdfb'
-    cyan: '#00a69f'
-    white: '#e4e4e4'
+    black: "#a3a3a3"
+    red: "#e98885"
+    green: "#a3c38b"
+    yellow: "#ffc68d"
+    blue: "#a6cae2"
+    magenta: "#e7cdfb"
+    cyan: "#00a69f"
+    white: "#e4e4e4"
 
   # Bright colors
   bright:
-    black: '#c8c8c8'
-    red: '#ffb2b0'
-    green: '#c8e2b9'
-    yellow: '#ffe1af'
-    blue: '#bddff7'
-    magenta: '#fce2ff'
-    cyan: '#0bbdb6'
-    white: '#feffff'
+    black: "#c8c8c8"
+    red: "#ffb2b0"
+    green: "#c8e2b9"
+    yellow: "#ffe1af"
+    blue: "#bddff7"
+    magenta: "#fce2ff"
+    cyan: "#0bbdb6"
+    white: "#feffff"
 
   # Selection colors
   selection:
-    text: '#5963a2'
-    background: '#f6f6f6'
+    text: "#5963a2"
+    background: "#f6f6f6"
 theme: Jellybeans
