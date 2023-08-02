@@ -72,10 +72,12 @@ ZSH_THEME="simple" # set by `omz`
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git yarn colored-man-pages zsh-autosuggestions zsh-syntax-highlighting macos jump tmux)
+plugins=(yarn colored-man-pages zsh-autosuggestions zsh-syntax-highlighting macos jump tmux docker)
 plugins+=(zsh-better-npm-completion)
 
 source $ZSH/oh-my-zsh.sh
+source /Users/drew/.oh-my-zsh/custom/plugins/forgit
+source /Users/drew/.oh-my-zsh/custom/plugins/forgit/forgit.plugin.zsh
 
 # User configuration
 
@@ -115,6 +117,9 @@ eval "$(zoxide init zsh)"
 
 # append
 path+=('/Users/drew/.config/bin')
+path+=('/Users/drew/bin')
+path+=('/Users/drew/flutter/flutter/bin')
+path+=('/Users/drew/bin/proto/bin')
 export DENO_INSTALL="/Users/drew/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 # or prepend
@@ -129,6 +134,8 @@ alias stopy="brew services stop yabai"
 alias lg="lazygit"
 alias gg="git-graph"
 alias v="nvim"
+alias ll="exa -l -a"
+alias ls="exa -a"
 
 eval "$(starship init zsh)"
 
@@ -140,3 +147,5 @@ if [ -f '/Users/drew/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/drew/googl
 if [ -f '/Users/drew/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/drew/google-cloud-sdk/completion.zsh.inc'; fi
 
 # source ~/.config/bin/zsh-better-npm-completion
+
+fpath+=~/.zfun

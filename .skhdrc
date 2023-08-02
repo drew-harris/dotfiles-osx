@@ -96,4 +96,6 @@ alt + shift - f : yabai -m window --toggle native-fullscreen
 
 
 # Open terminal
-alt - return : open -na /Applications/iTerm.app
+alt - return : open -na /Applications/Alacritty.app
+
+alt - m : $HOME/bin/toggle-stage-manager.sh
