@@ -90,12 +90,16 @@ alt - g : yabai -m space --toggle padding; yabai -m space --toggle gap
 # Fast focus desktop
 alt - tab : yabai -m space --focus recent
 
-
 # toggle window native fullscreen
 alt + shift - f : yabai -m window --toggle native-fullscreen
 
 
 # Open terminal
-alt - return : open -na /Applications/Alacritty.app
+# alt - return : open -na /Applications/Alacritty.app
 
 alt - m : $HOME/bin/toggle-stage-manager.sh
+
+
+
+# Connect airpods
+alt - a : BluetoothConnector c4-0b-31-d4-b0-5f --connect && SwitchAudioSource -i 141

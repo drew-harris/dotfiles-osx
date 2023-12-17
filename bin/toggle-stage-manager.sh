@@ -9,6 +9,7 @@ if [ $manager_enabled == 1 ] ; then
     yabai -m config --space $current_index left_padding 10
 else
     defaults write com.apple.WindowManager GloballyEnabled -bool true
+    # yabai -m config --space $current_index left_padding 70
     yabai -m config --space $current_index left_padding 170
     yabai -m space $current_index --layout stack
 fi

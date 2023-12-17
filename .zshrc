@@ -72,7 +72,7 @@ ZSH_THEME="simple" # set by `omz`
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(yarn colored-man-pages zsh-autosuggestions zsh-syntax-highlighting macos jump tmux docker)
+plugins=(yarn colored-man-pages zsh-autosuggestions zsh-syntax-highlighting macos jump tmux)
 plugins+=(zsh-better-npm-completion)
 
 source $ZSH/oh-my-zsh.sh
@@ -87,11 +87,12 @@ source /Users/drew/.oh-my-zsh/custom/plugins/forgit/forgit.plugin.zsh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+    export EDITOR='vim'
+    export TERM=xterm-256color
+else
+    export EDITOR='mvim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -112,16 +113,23 @@ export FZF_CTRL_R_OPTS="--reverse"
 export FZF_TMUX_OPTS="-p"
 export EDITOR=nvim
 
-eval $(thefuck --alias)
 eval "$(zoxide init zsh)"
 
 # append
 path+=('/Users/drew/.config/bin')
 path+=('/Users/drew/bin')
+path+=('/Users/drew/bin/jetbrains/')
 path+=('/Users/drew/flutter/flutter/bin')
 path+=('/Users/drew/bin/proto/bin')
+path+=('/Users/drew/go/bin')
+path+=('/Users/drew/bin/jdtls/bin')
+path+=('/Users/drew/programs/fmc/final-autonomous-code-assistant-agent-drew-harris/Code/target/debug')
+# export PATH="/usr/local/anaconda3/bin:$PATH"  # commented out by conda initialize
+
 export DENO_INSTALL="/Users/drew/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
+export HELIX_RUNTIME="/Users/drew/clones/helix/runtime"
+
 # or prepend
 # export to sub-processes (make it inherited by child processes)
 
@@ -136,6 +144,7 @@ alias gg="git-graph"
 alias v="nvim"
 alias ll="exa -l -a"
 alias ls="exa -a"
+alias ld="lazydocker"
 
 eval "$(starship init zsh)"
 
@@ -149,3 +158,24 @@ if [ -f '/Users/drew/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/drew
 # source ~/.config/bin/zsh-better-npm-completion
 
 fpath+=~/.zfun
+
+# bun completions
+[ -s "/Users/drew/.bun/_bun" ] && source "/Users/drew/.bun/_bun"
+export PATH=$PATH:/Users/drew/.spicetify
+# export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/drew/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/drew/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/drew/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/drew/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+

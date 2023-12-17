@@ -5,7 +5,7 @@ window:
     x: 4
     y: 4
   decorations: buttonless
-  opacity: 0.9999 # Fixes mission control animation lag
+  opacity: 0.999999 # Fixes mission control animation lag
 
 shell:
   program: /bin/zsh
@@ -13,7 +13,6 @@ shell:
     - -l
     - -c
     - "tmux attach || tmux new -A -s home"
-    # - "tmux new -A -s home"
 
 scrollling:
   history: 0
@@ -23,7 +22,7 @@ key_bindings:
   - { key: C, mods: Command, action: Copy }
   - { key: T, mods: Command, chars: "\x01c" }
   # new tab
-  - { key: L, mods: Command, chars: "\x01p" }
+  - { key: L, mods: Command, chars: "\x01n" }
   # next tab
   - { key: F, mods: Command, chars: "\x01f" }
   # search folders
@@ -37,21 +36,28 @@ mouse:
 
 font:
   normal:
-    # family: "Hack Nerd Font Mono"
-    family: "CaskaydiaCove Nerd Font Mono"
-    # family: "Iosevka Nerd Font"
-    # family: "Nova"
+    family: "Hack Nerd Font Mono"
+    # family: "MonoLisa Nerd Font"
+    # family: "CaskaydiaCove Nerd Font Mono"
     style: Regular
-  size: 15.0
+  bold:
+    # family: "CaskaydiaCove Nerd Font Mono"
+    family: "Hack Nerd Font Mono"
+    # family: "MonoLisa Nerd Font"
+    style: Bold
+  italic:
+    # family: "CaskaydiaCove Nerd Font Mono"
+    family: "Hack Nerd Font Mono"
+    # family: "MonoLisa Nerd Font"
+    style: Italic
+  size: 14.0
 
 custom_cursor_colors: true
 
 bell:
   animation: EaseOutExpo
-  color: "0xffffff"
+  color: "#ffffff"
   duration: 0
-
-draw_bold_text_with_bright_colors: true
 
 selection:
   # This string contains all characters that are used as separators for
