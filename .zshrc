@@ -1,5 +1,5 @@
-
-# If you come from bash you might have to change your $PATH.
+# CodeWhisperer pre block. Keep at the top of this file.
+# # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
@@ -112,6 +112,7 @@ fi
 export FZF_CTRL_R_OPTS="--reverse"
 export FZF_TMUX_OPTS="-p"
 export EDITOR=nvim
+export T_REPOS_DIR="$HOME/programs"
 
 eval "$(zoxide init zsh)"
 
@@ -130,8 +131,6 @@ export DENO_INSTALL="/Users/drew/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 export HELIX_RUNTIME="/Users/drew/clones/helix/runtime"
 
-# or prepend
-# export to sub-processes (make it inherited by child processes)
 
 
 # Open vs code and close
@@ -145,6 +144,9 @@ alias v="nvim"
 alias ll="exa -l -a"
 alias ls="exa -a"
 alias ld="lazydocker"
+alias bp="bat package.json"
+
+alias benvim='NVIM_APPNAME="bens-config" nvim'
 
 eval "$(starship init zsh)"
 
@@ -179,3 +181,8 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# # CodeWhisperer post block. Keep at the bottom of this file.
+#
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"

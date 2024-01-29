@@ -5,7 +5,7 @@ window:
     x: 4
     y: 4
   decorations: buttonless
-  opacity: 0.999999 # Fixes mission control animation lag
+  opacity: 0.9999 # Fixes mission control animation lag
 
 shell:
   program: /bin/zsh
@@ -37,20 +37,8 @@ mouse:
 font:
   normal:
     family: "Hack Nerd Font Mono"
-    # family: "MonoLisa Nerd Font"
-    # family: "CaskaydiaCove Nerd Font Mono"
     style: Regular
-  bold:
-    # family: "CaskaydiaCove Nerd Font Mono"
-    family: "Hack Nerd Font Mono"
-    # family: "MonoLisa Nerd Font"
-    style: Bold
-  italic:
-    # family: "CaskaydiaCove Nerd Font Mono"
-    family: "Hack Nerd Font Mono"
-    # family: "MonoLisa Nerd Font"
-    style: Italic
-  size: 14.0
+  size: 13.0
 
 custom_cursor_colors: true
 
@@ -69,7 +57,7 @@ selection:
 colors:
   # Default colors
   primary:
-    background: "#2D2A2E"
+    background: "#171717"
     foreground: "#FCFCFA"
 
   # Normal colors

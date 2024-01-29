@@ -99,7 +99,5 @@ alt + shift - f : yabai -m window --toggle native-fullscreen
 
 alt - m : $HOME/bin/toggle-stage-manager.sh
 
-
-
 # Connect airpods
-alt - a : BluetoothConnector c4-0b-31-d4-b0-5f --connect && SwitchAudioSource -i 141
+alt - a : BluetoothConnector c4-0b-31-d4-b0-5f --connect && SwitchAudioSource -u C4-0B-31-D4-B0-5F:output
